@@ -1,8 +1,20 @@
-## How To Install
+## Installation
 
-### Add the line below to `Packages/manifest.json`
+Add the following line to `Packages/manifest.json`:
 
-for version `x.x.x`
 ```json
-"com.virtuesky._package_name_":"https://github.com/VirtueSky/_package_name_.git#x.x.x",
+"com.virtuesky.firebasedebugviewios": "https://github.com/unity-package/firebase-debugview-ios.git#1.0.0",
 ```
+
+## Usage
+
+Supported on iOS devices only. Use the following API to enable or disable Firebase DebugView:
+
+```csharp
+using VirtueSky.DebugView;
+
+FirebaseDebugViewIOS.Enable();  // Enable DebugView
+FirebaseDebugViewIOS.Disable(); // Disable DebugView
+```
+
+After enabling or disabling DebugView, force-close and relaunch the app, then check events in Firebase Console > Analytics > DebugView.
